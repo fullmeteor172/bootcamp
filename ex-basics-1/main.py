@@ -1,5 +1,5 @@
 from typing import Optional
-
+from rich import print
 
 def hello(name: Optional[str] = None) -> None:
     """
@@ -9,4 +9,4 @@ def hello(name: Optional[str] = None) -> None:
         name (Optional[str]): Name to greet. Defaults to None (prints 'world').
     """
     target: str = name or "world"
-    print(f"Hello {target}")
+    print(f":wave: [bold green]Hello {target}![/bold green]")
