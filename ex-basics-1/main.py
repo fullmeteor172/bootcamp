@@ -1,12 +1,16 @@
 from typing import Optional
+import typer
 from rich import print
 
-def hello(name: Optional[str] = None) -> None:
-    """
-    Print a hello message with the provided name or 'world' by default.
+app = typer.Typer(help="Simple CLI for greeting people.")
 
-    Args:
-        name (Optional[str]): Name to greet. Defaults to None (prints 'world').
+@app.command()
+def hello(name: Optional[str] = typer.Argument(None, help="Name to greet")) -> None:
+    """
+    CLI command that prints a greeting.
     """
     target: str = name or "world"
     print(f":wave: [bold green]Hello {target}![/bold green]")
+
+if __name__ == "__main__":
+    app()

@@ -27,9 +27,7 @@ publish-url = "https://test.pypi.org/legacy/"
 
 2. Built my project using `uv build` and verified `/dist`'s contents
 3. Published my package using `uv publish` and entering my test pypi token when prompted.
-
 ---
-
 ### Task Description: 2 (Installing new packages)
 Enhance the application with the following:
 
@@ -38,3 +36,18 @@ Enhance the application with the following:
 
 ### Solution
 1. Imported rich and modified the print statement
+---
+### Task Description: 3 (Writing command line application)
+1.  Install `typer`
+2.  Use it to write a command line application in the module
+3.  Now, make the cli app as a part of the pyproject.toml so that it gets installed when we install the package.
+4.  Record and show the demo where you install the package and run the command and show it.
+### Solution
+1. Installing typer using `uv add typer`
+2. Wrapping the code with it to make it accept CLI arguments
+3. Testing it and verifying my result
+<img src="https://gcdnb.pbrd.co/images/WJCbFuXXmKM0.png?o=1" alt="drawing" width="600"/>
+---
+
+
+
