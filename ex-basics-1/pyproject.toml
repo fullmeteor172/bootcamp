@@ -1,0 +1,11 @@
+[project]
+name = "ex-basics-1-pluto"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv]
+publish-url = "https://test.pypi.org/legacy/"
+
