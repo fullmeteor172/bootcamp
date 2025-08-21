@@ -11,21 +11,12 @@
 In your readme, please provide the link to the package. Also, do the readme.md well enough so that the package page looks good.
 
 ### Solution:
-1. **Initialized the project and setup the** `.toml`
+1. Initialized the project and setup the `.toml`.
 ```bash
-> uv init ex-basics-1
-> #Setup my simple python file and my toml
+> uv init --package ex-basics
+> #Setup my python files in src/ex_basics_aganitha
 ```
-
-```bash
-# .../ex-basics-1/pyproject.toml
-
-...
-[tool.uv]
-publish-url = "https://test.pypi.org/legacy/"
-```
-
-2. Built my project using `uv build` and verified `/dist`'s contents
+2. Built my project using `uv build` and verified `/dist`'s contents.
 3. Published my package using `uv publish` and entering my test pypi token when prompted.
 ---
 ### Task Description: 2 (Installing new packages)
@@ -35,7 +26,7 @@ Enhance the application with the following:
 2.  Enhance your code to use `rich` to print rich message
 
 ### Solution
-1. Imported rich and modified the print statement
+1. Added rich using `uv add rich` and modified the print statement.
 ---
 ### Task Description: 3 (Writing command line application)
 1.  Install `typer`
@@ -43,11 +34,16 @@ Enhance the application with the following:
 3.  Now, make the cli app as a part of the pyproject.toml so that it gets installed when we install the package.
 4.  Record and show the demo where you install the package and run the command and show it.
 ### Solution
-1. Installing typer using `uv add typer`
-2. Wrapping the code with it to make it accept CLI arguments
-3. Testing it and verifying my result
-<img src="https://gcdnb.pbrd.co/images/WJCbFuXXmKM0.png?o=1" alt="drawing" width="600"/>
----
+1. Installing typer using `uv add typer`.
+2. Created a CLI using `typer.Typer()` and defined a command function decorated with `@app.command()` that accepts a `typer.Argument`.
+3. Modifying the `.toml` to add the `say-hello` command definition. This makes the CLI available as an executable after installation.
+```bash
+# .../ex-basics-1/pyproject.toml
+[project.scripts]
+say-hello = "ex_basics_aganitha.main:app"
+```
+4. Testing it and verifying my result.
+<img src="https://i.ibb.co/4ZzdMLG0/Screenshot-From-2025-08-21-08-31-22.png" alt="drawing" width="600"/>
 
 
 

@@ -24,15 +24,19 @@ wheels = [
 ]
 
 [[package]]
-name = "ex-basics-1-pluto"
-version = "0.3.0"
-source = { virtual = "." }
+name = "ex-basics-aganitha"
+version = "0.1.0"
+source = { editable = "." }
 dependencies = [
+    { name = "rich" },
     { name = "typer" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "typer", specifier = ">=0.16.1" }]
+requires-dist = [
+    { name = "rich", specifier = ">=14.1.0" },
+    { name = "typer", specifier = ">=0.16.1" },
+]
 
 [[package]]
 name = "markdown-it-py"
